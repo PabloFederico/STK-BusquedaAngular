@@ -1,0 +1,1179 @@
+﻿/*------------------------------------*\
+    $INDICE
+\*------------------------------------*/
+
+/**
+ * RESETS BASICOS...................Estilos basicos.
+ * VARIABLES COLORES ..............Colores definidos por Telefonica.
+ * FUENTES.........................Fuentes Telefonica y iconos.
+ * ICONOS..........................Reglas basicas para los iconos.
+ * BUSCADOR........................Estilos para el buscador.
+ * CARROUSEL.......................Ajustes basicos para el Slider.
+ * MENU............................Definiciones Menu principal y desplegables.
+ * PANEL HERRAMIENTAS..............Botones y panel de herramientas.
+ * ICONOS 365......................Definiciones panel OFICE 365/iconos.
+ * REDES SOCIALES..................Titulos de los bloques de redes sociales.
+ * SUBSITIOS.......................Estilos para las paginas internas de los subsitios
+ * BUSQUEDA RESULTADOS.............Resultados de busquedas
+ * BUSQUEDA GRUPOS RESULTADOS......Resultados de busquedas
+ * ACORDEON.................
+ * BREAKPOINTS.....................Ajustes para Mobiles.
+ */
+
+/*------------------------------------*\
+    RESETS BASICOS
+\*------------------------------------*/
+
+.pagination{
+	
+	font-family: 'telefonica-bold';
+	font-size: 1.2em;
+	color: #003245;
+	margin: 10px auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.ng-table-counts{
+	display:none !important;
+}
+
+.pagination a{
+	font-family: 'telefonica-bold';
+	color: #003245;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	margin: 0 10px;
+	color: #003245;
+	align-items: center;
+	display: flex;
+	transition: all ease 0.8s;
+}
+
+.pagination a span{
+font-style: normal !important;
+}
+
+
+.pagination a:hover{
+	background: #003245;
+	color: #fff;
+}
+
+.pagination li:first-child a{
+font-family: 'telefonica-bold';
+font-size: 1em;
+color: #003245;
+line-height: 56px;
+display: block;
+text-align: center;
+width: 120px;
+box-shadow: inset 10px 0 0 0 #00688f;
+transition: all ease 0.8s;  
+}
+
+.pagination li:first-child a:hover{
+box-shadow: inset 120px 0 0 0 #00688f;
+color: #fff; 
+}
+
+.pagination li:last-child a:hover{
+box-shadow: inset -120px 0 0 0 #003245;
+color: #fff; 
+}
+
+
+.pagination li:last-child a{
+font-family: 'telefonica-bold';
+font-size: 1em;
+color: #003245;
+line-height: 56px;
+display: block;
+text-align: center;
+width: 120px;
+box-shadow: inset -10px 0 0 0 #003245;
+transition: all ease 0.8s;  
+}
+
+
+
+body{
+  background: var(--main-bg-color);
+  font-family: 'telefonica-regular';
+  color: #003245;
+  margin: 0;
+}
+
+header{
+  background: #fff;
+  /*height: 330px;*/  
+
+}
+ul {
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+    -moz-outline-style: none;
+    border: 0px;
+}
+
+a img {
+    border: 0px;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+}
+/*------------------------------------*\
+    VARIABLES COLORES
+\*------------------------------------*/
+
+:root {
+    --main-bg-color: #fff;
+    --main-bluedark: #003245;
+    --second-blueligth: #00edff;  
+    --second-blue: #00688f;
+    --color-purple:#980098;
+    --purpleligt:#b3009c;
+    --grayligth:#d2d0d0;
+    --graydark: #636363;
+    --main-padding: 15px;    
+}
+.purple{
+background: #980098
+}
+
+/*------------------------------------*\
+    FUENTES
+\*------------------------------------*/
+
+/* FUENTES TELEFONICA  */
+@font-face {
+    font-family: 'telefonica-light';
+    src: url('../fonts/regular/TelefonicaWeb-Light.eot');
+    src: url('../fonts/regular/TelefonicaWeb-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/regular/TelefonicaWeb-Light.woff2') format('woff2'), url('../fonts/regular/TelefonicaWeb-Light.woff') format('woff'), url('../fonts/regular/TelefonicaWeb-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: 'telefonica-regular';
+    src: url('../fonts/regular/TelefonicaWeb-Regular.eot');
+    src: url('../fonts/regular/TelefonicaWeb-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/regular/TelefonicaWeb-Regular.woff2') format('woff2'), url('../fonts/regular/TelefonicaWeb-Regular.woff') format('woff'), url('../fonts/regular/TelefonicaWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: 'telefonica-bold';
+    src: url('../fonts/bold/TelefonicaWeb-Bold.eot');
+    src: url('../fonts/bold/TelefonicaWeb-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bold/TelefonicaWeb-Bold.woff2') format('woff2'), url('../fonts/bold/TelefonicaWeb-Bold.woff') format('woff'), url('../fonts/bold/TelefonicaWeb-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* ICONOS 365  */
+@font-face {
+    font-family: 'SPO365Icons';
+    src: url('../fonts/fabricmdl2icons-2.47.woff2');
+    src: url('../fonts/fabricmdl2icons-2.47d.eot?#iefix') format('embedded-opentype'), url('../fonts/fabricmdl2icons-2.47.woff2') format('woff2'), url('../fonts/fabricmdl2icons-2.47.woff') format('woff'), url('../fonts/fabricmdl2icons-2.47.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* ICONOS GENERALES  */
+@font-face {
+      font-family: 'telefonica';
+      src: url('../fonts/iconos/telefonica.eot?80720598');
+      src: url('../fonts/iconos/telefonica.eot?80720598#iefix') format('embedded-opentype'),
+           url('../fonts/iconos/telefonica.woff?80720598') format('woff'),
+           url('../fonts/iconos/telefonica.ttf?80720598') format('truetype'),
+           url('../fonts/iconos/telefonica.svg?80720598#telefonica') format('svg');
+      font-weight: normal;
+      font-style: normal;
+}
+/*------------------------------------*\
+    ICONOS
+\*------------------------------------*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "telefonica";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.icon-pencil:before { content: '\e800'; }  
+.icon-download:before { content: '\e801'; }
+.icon-cancel-circle:before { content: '\e802'; }
+.icon-cog:before { content: '\e803'; }
+.icon-left-open-big:before { content: '\e804'; }
+.icon-right-open-big:before { content: '\e805'; }
+.icon-up-open-big:before { content: '\e806'; }
+.icon-down-open-big:before { content: '\e807'; }
+.icon-search:before { content: '\e808'; }
+.icon-plus-1:before { content: '\e809'; }
+.icon-minus-1:before { content: '\e80a'; }
+.icon-workplace:before { content: '\e80b'; }
+.icon-menu:before { content: '\f0c9'; }
+.icon-angle-left:before { content: '\f104'; }
+.icon-angle-right:before { content: '\f105'; }
+.icon-angle-up:before { content: '\f106'; }
+.icon-angle-down:before { content: '\f107'; }
+.icon-file-pdf:before { content: '\f1c1'; }
+.icon-file-word:before { content: '\f1c2'; }
+.icon-file-excel:before { content: '\f1c3'; }
+.icon-file-powerpoint:before { content: '\f1c4'; }
+.icon-file-image:before { content: '\f1c5'; }
+.icon-file-video:before { content: '\f1c8'; }
+.icon-facebook-rect:before { content: '\f301'; }
+.icon-twitter-bird:before { content: '\f303'; }
+.icon-instagram:before { content: '\f31e'; }
+
+.spacer-10{
+  margin: 10px 0;
+}
+
+h1{
+	font-size: 4.2em !important;
+	letter-spacing: -.05em;
+}
+
+footer{
+	background: var(--main-bluedark);
+	height: 70px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.2em;
+}
+.probootstrap_section {
+    padding: 1.5em 0;
+    width: 100%;
+}
+.destacado{
+	padding: 2rem 2.5rem;
+}
+.destacado p{
+	font-size: 1.7em;
+	line-height: 1.2em !important;
+}
+.card-img-top{
+	border-radius: 0 !important;
+}
+#anio{
+	border-right: 1px solid #fff;
+	padding-right: 5px;
+}
+.mensaje{
+height: 10em;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.mensaje h2{
+  font-size: 3em;
+  text-align: center;
+  color: #292525;
+}
+article{
+margin: 0 15px;
+}
+.date{
+white-space: nowrap;
+}
+/*------------------------------------*\
+    BUSCADOR
+\*------------------------------------*/
+.buscador{
+	width: 100%;
+	padding: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: var(--grayligth);
+}
+.buscador input{
+	width: 100%;
+	height: 60px;
+	padding: 0 10px;
+}
+.buscador .btn-send{
+	background: var(--graydark);
+	color: #fff;
+	border-radius: 0;
+}
+.buscador .btn-send:hover{
+background: var(--main-bluedark);
+color: #fff;
+border-radius: 0;
+}
+.fecha{
+line-height: 60px;
+border-bottom: #e8e8e8 solid 3px;
+font-family: 'telefonica-regular';
+font-size: 1.1em;	
+text-align: right;
+}
+.brand{
+height: 196px;
+padding-top: 40px;
+}
+
+/*img .img-responsive {
+    margin: auto;
+    display: block;
+}*/
+/*------------------------------------*\
+    CARROUSEL
+\*------------------------------------*/
+.carousel-caption{
+font-family: 'telefonica-regular';
+display: block; 
+height: 400px; 
+width: 500px; 
+background: var(--main-bluedark);
+top:0;
+padding: 70px 45px 45px 45px;
+}
+.carousel-caption a{
+float: left;
+color: #fff;
+font-size: 1.8em;
+text-align: left;
+text-decoration: underline !important;
+}
+.carousel-caption h2{
+font-family: 'telefonica-bold' !important;
+font-style: italic;
+font-size: 3.5em !important;
+line-height: 1em;
+text-align: left;
+margin-bottom: 20px;
+}
+.carousel-caption p{
+text-align: left;
+font-size: 1.5em !important;
+line-height: 1.2em;
+}
+.carousel .icon-angle-right, 
+.carousel .icon-angle-left{
+font-size: 5.5em;
+font-weight: 300
+}
+/*------------------------------------*\
+    MENU
+\*------------------------------------*/
+.bluedark{
+  background: #003245;
+} 
+.navbar .dropdown-menu div[class*="col"] {
+margin-bottom:1rem;
+}
+.dropdown-menu {
+border:none !important;
+}
+.dropdown-toggle::after{
+display: none;
+}
+.bg-navbar{
+margin: auto;
+height: 70px;
+background: #b3009c;
+}
+.navbar-nav > li > a {
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0 .78em;
+float: left;
+font-family: 'telefonica-bold';
+color: #fff;
+font-size: 26px;
+letter-spacing: -.01em;
+text-decoration: none;  
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus{
+background:#00edff;
+color:#003245;
+}
+ 
+/* -----MENU DESPLEGABLE------- */
+.navbar .dropdown {position:static;}
+
+.navbar {
+padding-top:0px;
+padding-bottom:0px;
+
+}
+.navbar .dropdown-menu {
+border-radius: 0;
+background: #00edff!important;
+border-bottom: 38px solid #003245 !important;
+position: relative;
+top: 68px;
+padding: 20px;
+}
+
+.dropdown-menu {
+width:100%;
+left:0;
+right:0;  
+}
+
+/* Menu Content Styles */
+.nav-column > ul > li a{
+display: block;
+line-height: 26px;
+font-family: 'telefonica-bold';
+font-size: 1.2em;
+color: #003245;
+padding: 7px 0;
+border-bottom: 2px solid #00a2b5;
+font-size-adjust: 0.58;
+}
+
+.nav-column > ul > li > ul > li > a{
+font-family: 'telefonica-regular';
+color: #003245;
+margin-left: 5px;
+border-bottom: 0;
+font-weight: normal;
+}
+.nav-column li a:hover { 
+color: #636363; 
+}
+.navbar-dark .navbar-toggler{
+    color: #fff; 
+    border: none;
+}
+button:focus {
+outline: 0 !important;
+}
+
+/*------------------------------------*\
+    PANEL HERRAMIENTAS
+\*------------------------------------*/
+.btn-herramientas{
+font-family: 'telefonica-regular';
+font-size: 1.5em;
+color: #fff;
+background: var(--color-purple);
+height: 100px;
+display: block;
+width: 273px;
+position: absolute; 
+display: flex;
+justify-content: center;
+align-items: center;
+bottom: 0;
+}
+.btn-herramientas:hover,
+.btn-herramientas:focus{
+color: #fff;
+background: var(--purpleligt);
+}
+.btn-m-herramientas{
+  display: none;
+}
+.panel-herramientas{
+width: 100%;
+background: var(--purpleligt);
+color: #fff;
+font-family: 'telefonica-regular';
+}
+.panel-herramientas h2{
+text-align: center;
+font-family: 'telefonica-bold';
+font-style: italic;
+font-size: 2.5em;
+margin-bottom: 0.5em;
+}
+.panel-herramientas .accesos li{
+font-size: 1.7em;
+text-align: left;
+line-height: 1em;
+padding-top: .80em;
+letter-spacing: -.05em;
+}
+.panel-herramientas .accesos li i{
+/*font-size: 1.2em;*/
+}
+.panel-herramientas .icon-cancel-circle,
+.panel-herramientas .icon-pencil{
+font-size: 2em;
+color: #fff;
+}
+
+.sp-border{
+border-right: solid 2px #fff;
+}
+.st-border{
+width: 147px;
+height: 10px;
+display: block;
+background-color: #fff;
+margin: auto;
+}
+.panel-herramientas span {
+font-size: 1em;
+font-style: italic;
+}
+.panel-365{
+background: var(--main-bluedark);
+margin: auto;
+width: 100%;
+/*display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+align-items: center;*/
+
+}
+/*------------------------------------*\
+    ICONOS 365
+\*------------------------------------*/
+
+.iconos-365 {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: row;
+padding-bottom: 2em;
+}
+.blue {
+background: #0072c6
+}
+.ms-Icon {
+font-family: 'SPO365Icons';
+font-style: normal;
+font-size: 40px;
+speak: none;
+padding: 5px;
+color: #fff;
+}
+.caja {
+height: 130px;
+width: 130px;
+font-size: 20px;
+text-align: center;
+align-items: center;
+display: flex;
+flex-direction: column; /* aquí */
+justify-content: center;
+float: left;
+margin: 10px;
+}
+.caja span{
+color: #fff;
+padding-top: 10px;
+font-family: 'telefonica-regular';
+font-size: 14px;
+font-weight: 100;
+
+}
+.OutlookLogoInverse16:before {
+    content: '\F39C';
+    padding-top: 10px;
+}
+.OutlookLogoInverse16:before {
+    content: '\F39C';
+}
+.Calendar:before {
+    content: '\E787';
+}
+.People:before {
+    content: '\E716';
+}
+.YammerLogo:before {
+    content: '\ED19';
+}
+.OneDrive:before {
+    content: '\E941';
+}
+.Word:before {
+    content: '\F390';
+}
+
+/*------------------------------------*\
+    REDES SOCIALES
+\*------------------------------------*/
+
+.redes-sociales h2{
+  font-size: 3.5em !important;
+  letter-spacing: -.05em;
+  text-align:center;
+}
+.redes .titular{
+  background: #003245;
+  height: 44px;
+  color: #fff;
+  padding: .5em 1em;
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 10px;
+}
+
+.redes .titular h3{
+
+  font-size: 1.3em;
+  color: #fff;
+}
+.redes .titular span {
+  text-align: left;
+  margin-left: 15px;
+  font-size: 1em !important;
+}
+.redes{
+  min-height: 330px;
+  border-bottom: 10px solid #003245;
+  display: block;
+}
+
+/*------------------------------------*\
+    SUBSITIOS
+\*------------------------------------*/
+.subsitio{
+padding-top: 45px;
+padding-bottom: 70px;
+}
+.subsitio .titular {
+display: flex;
+align-items: center;
+text-align: left;
+padding-bottom: 55px;
+}
+.subsitio .titular h2{
+font-size: 4.2em !important;
+}
+.subsitio .titular span{
+font-size: 1.6em;
+float: left;
+}
+.subsitio .titular i{
+font-size: 2em;
+font-weight: normal;
+}
+.subsitio p{
+font-family: 'telefonica-regular';
+font-size: 1.5em;
+line-height: 30px;
+font-weight: normal;
+color: #003245;
+}
+.subsitio h3 {
+font-family: 'telefonica-bold';
+font-size: 2.1em;
+}
+.subsitio .menu-left{
+line-height: 40px;
+font-size: 1.4em;
+}
+.subsitio .menu-left a{
+color: var(--main-bluedark);
+padding: 4px 0;
+}
+.subsitio .menu-left a:hover{
+background: var(--second-blueligth);
+padding: 4px 15px;
+position: relative;
+left: -15px;
+}
+.subsitio .btn-volver{
+font-family: 'telefonica-bold';
+font-size: 1.5em;
+color: #003245;
+line-height: 56px;
+display: block;
+text-align: center;
+width: 170px;  
+box-shadow: inset -10px 0 0 0 #003245;
+transition: all ease 0.8s;
+}
+.subsitio .btn-volver:hover {
+box-shadow: inset -170px 0 0 0 #003245;
+color: #fff;
+}
+
+.grupos span{
+font-family: 'telefonica-bold';
+font-size: 1em;
+padding-right: 5px;
+line-height: 16px;
+}
+.grupos .cant-miembros{
+font-family: 'telefonica-bold';
+font-size: 1em;
+border-right: 1px solid #000;
+margin-right: 5px;
+float: left;
+padding-right: 5px; 
+}
+.grupos p{
+font-family: 'telefonica-regular';
+font-size: 1.1em;
+}
+.grupos h4{
+font-family: 'telefonica-bold';
+font-size: 2em;
+}
+.menu-grupos{
+line-height: 40px;
+font-size: 1.4em;
+}
+.menu-grupos a{
+color: var(--main-bluedark);
+padding: 4px 0;
+}
+.menu-grupos a:hover{
+background: var(--second-blueligth);
+}
+/*------------------------------------*\
+    BUSQUEDA RESULTADOS
+\*------------------------------------*/
+.cat-resultados ul{
+display: flex;
+justify-content: center;
+}
+.cat-resultados ul > li > a{
+height: 70px;
+line-height: 70px;
+padding: 0 .65em;
+float: left;
+font-family: 'telefonica-regular';
+color: #fff;
+font-size: 26px;
+letter-spacing: -.01em;
+text-decoration: none;
+}
+.cat-resultados ul > li > a:hover,
+.cat-resultados ul > li > a:focus{
+background:var(--second-blueligth);
+color:#003245;
+}
+.cat-resultados .activo{
+font-family: 'telefonica-bold';
+}
+.busqueda{
+padding-top: 45px;
+padding-bottom: 40px;
+}
+.busqueda h2{
+font-size: 2.8em;
+line-height: 56px;
+}
+.busqueda span{
+font-style: italic;
+}
+.busqueda .btn-volver{
+font-family: 'telefonica-bold';
+font-size: 1em;
+color: #003245;
+line-height: 56px;
+display: block;
+text-align: center;
+width: 120px;
+box-shadow: inset 10px 0 0 0 #003245;
+transition: all ease 0.8s;
+}
+.busqueda .btn-volver:hover{
+box-shadow: inset 120px 0 0 0 #003245;
+color: #fff;
+}
+.busqueda .table th{
+border-top: 0;
+}
+.busqueda .table tr{
+border-color: #e4e4e4;
+}
+.busqueda .table th{
+font-family: 'telefonica-bold';
+font-size: 1.4em;
+}
+.pagination{
+font-family: 'telefonica-bold';
+font-size: 1.2em;
+color: #003245;
+margin: 10px auto;
+width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+align-items: center;
+}
+.pagination .pag-item{
+font-family: 'telefonica-bold';
+color: #003245;
+justify-content: center;
+width: 56px;
+height: 56px;
+margin: 0 10px;
+color: #003245;
+align-items: center;
+display: flex;
+transition: all ease 0.8s;
+}
+.pagination .pag-item:hover{
+background: #003245;
+color: #fff;
+}
+.pagination .pag-activo{
+background: #003245;
+color: #fff;
+}
+.pagination .pag-control{
+font-family: 'telefonica-bold';
+font-size: 1em;
+color: #003245;
+line-height: 56px;
+display: block;
+text-align: center;
+width: 120px;  
+}
+.pagination .pag-prev{
+box-shadow: inset 10px 0 0 0 #00688f;
+transition: all ease 0.8s;
+}
+.pagination .pag-prev:hover {
+box-shadow: inset 120px 0 0 0 #00688f;
+color: #fff;
+}
+.pagination .pag-next{
+box-shadow: inset -10px 0 0 0 #003245;
+transition: all ease 0.8s;
+}
+.pagination .pag-next:hover {
+box-shadow: inset -120px 0 0 0 #003245;
+color: #fff;
+}
+/*------------------------------------*\
+    ACORDEON
+\*------------------------------------*/
+.subsitio .lista-grupos{
+line-height: 40px;
+font-size: 1.4em;
+}
+.subsitio .lista-grupos a{
+color: var(--main-bluedark);
+padding: 4px 0;
+}
+/*------------------------------------*\
+    ACORDEON
+\*------------------------------------*/
+
+.panel-group{
+border-top: 1px solid #003245;
+}
+#accordion .panel-title a{
+height: 90px;
+background: var(--main-bg-color);
+font-family: 'telefonica-regular';
+color: #003245;
+/*border-top: 1px solid #c3c3c3;*/
+border-bottom: 1px solid #003245;
+border-radius: 0;
+font-size: 1.2em;
+color: var(--main-bluedar);
+position: relative;
+display: flex;
+align-items: center;
+text-align: left;
+font-weight: normal;
+}
+#accordion .panel-title a:before{
+content: "\e80a";
+font-family: 'telefonica';
+font-weight: normal;
+color: #000;
+text-align: right;
+position: absolute;
+right: 15px;
+}
+#accordion .panel-title a.collapsed:before{ content: "\e809"; }
+#accordion .panel-body{
+padding: 15px;
+font-size: 15px;
+color: #222;
+line-height: 27px;
+border: none;
+text-align: left;
+}
+#accordion .panel-body p{ margin-bottom: 0; }
+
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+@media screen and (max-width: 500px) {
+  .seccionToggle h2 {
+    margin-top: 0; } }
+@media screen and (max-height: 550px) {
+  .seccionToggle h2 {
+    font-size: 40px;
+    margin-top: 0; } }
+
+@media all and (max-width: 991px) {
+
+.navbar-nav > li > a {
+height: 38px;
+font-size: 22px;
+}
+.navbar-nav .dropdown-menu{
+position: relative;
+float: left;
+top: -2px;
+border-bottom: none !important;
+}
+.navbar .dropdown-menu li {
+text-align:  center; 
+}
+.navbar {
+padding-top:0.5em;
+padding-bottom:0.5em;
+}
+.btn-herramientas{
+  display: none;
+}
+.btn-m-herramientas{
+display: block;
+position: relative;
+background: var(--color-purple);
+height: 44px; 
+display: flex; 
+justify-content: flex-end; 
+align-items: center;
+color: #fff;
+padding-right: 15px;
+}
+.herramientas{
+width: 100% !important;
+display: inline-block;
+background: var(--color-purple);
+}
+.btn-m-herramientas .icon-angle-down{
+position: absolute;
+left: 10px;
+font-size: 1.5em;
+}
+/* -----SUBSITIO------- */
+
+.subsitio{
+padding-top: 30px;
+padding-bottom: 80px;
+}
+.subsitio .menu-left{
+line-height: 24px;
+text-align: center;
+font-size: 0.90em;
+padding-bottom: 20px;
+}
+.subsitio .menu-left a:hover{
+left: 0;
+}
+.subsitio .titular {
+display: flex;
+align-items: center;
+flex-direction: row;
+padding-bottom: 15px;
+justify-content: center;
+}
+.subsitio .titular h2{
+font-size: 2em !important;
+}
+.subsitio .titular span{
+font-size: 0.9em;
+}
+.subsitio p{
+font-size: 0.9em;  
+line-height: 1.2em;
+}
+@media screen and (max-width: 575px) {
+.carousel-caption{
+height: 200px; 
+width: 210px; 
+top:0;
+padding: 25px 15px 10px 15px;
+}
+.carousel-caption a{
+font-size: 0.80em;
+}
+.carousel-caption h2{
+font-size: 1.5em !important;
+margin-bottom: 15px;
+}
+.carousel-caption p{
+font-size: 0.80em !important;
+line-height: 1em;
+font-weight: normal;
+}
+.carousel .icon-angle-right, 
+.carousel .icon-angle-left{
+display: none;
+}
+.btn-herramientas{
+  display: none;
+}
+.btn-m-herramientas{
+display: block;
+position: relative;
+background: var(--color-purple);
+height: 44px; 
+display: flex; 
+justify-content: flex-end; 
+align-items: center;
+color: #fff;
+padding-right: 15px;
+}
+
+.panel-herramientas h2{
+font-size: 1.5em;
+}
+.panel-herramientas .st-border{
+width: 86px;
+height: 5px; 
+}
+.panel-herramientas,
+.panel-herramientas .accesos li{
+text-align: center;
+}
+.panel-herramientas .accesos li i{
+display: none;
+}
+.btn-m-herramientas .icon-angle-down{
+position: absolute;
+left: 10px;
+font-size: 1.5em;
+}
+.brand .img-fluid {
+max-width: 50%;
+height: auto;
+margin: 0 15px;
+}
+.fecha{
+line-height: 28px;
+font-size: 0.8em;
+}
+.brand{
+height: 55px;
+padding-top: 12px;
+}
+h1{
+font-size: 3em !important;
+}
+.destacado{
+padding: 0.5rem 1rem;
+}
+.destacado p{
+font-size: 1.2em;
+line-height: 1.5em !important;
+padding: 0 2em;
+}
+.probootstrap_section{
+padding: 0;
+}
+.redes-sociales{
+display: none;
+}
+.navbar-nav > li > a {
+height: 38px;
+font-size: 22px;
+}
+.navbar-nav .dropdown-menu{
+position: relative;
+float: left;
+top: -2px;
+border-bottom: none !important;
+}
+.navbar .dropdown-menu li {
+text-align:  center; 
+}
+.navbar {
+padding-top:0.5em;
+padding-bottom:0.5em;
+}
+  
+.herramientas{
+width: 100% !important;
+display: inline-block;
+background: var(--color-purple);
+}
+
+/* -----SUBSITIO------- */
+
+.subsitio{
+padding-top: 30px;
+padding-bottom: 80px;
+}
+.subsitio .menu-left{
+line-height: 24px;
+text-align: center;
+font-size: 0.90em;
+padding-bottom: 20px;
+}
+.subsitio .menu-left a:hover{
+left: 0;
+}
+.subsitio .titular {
+display: flex;
+align-items: center;
+flex-direction: column;
+padding-bottom: 15px;
+}
+.subsitio .titular h2{
+font-size: 2em !important;
+}
+.subsitio .titular span{
+font-size: 0.9em;
+}
+.subsitio p{
+font-size: 0.9em;  
+line-height: 1.2em;
+}
+
+/* -----ACORDEON------- */
+
+#accordion .panel-title a{
+height: 54px;
+border-bottom: 1px solid #003245;
+border-radius: 0;
+font-size: 1em;
+}
+
+}
